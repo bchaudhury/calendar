@@ -187,6 +187,14 @@
     background: #7c8a02;
     border-radius: 10%;
 }
+
+.holidaytext{
+    color: #fff;
+    font-size: 12px;
+    font-weight: small;
+    text-align: center;
+    color: black;
+}
 /* 
 .calander__current__month:hover {
     background: #a16f01;

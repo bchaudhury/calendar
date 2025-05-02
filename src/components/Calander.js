@@ -104,10 +104,14 @@ const Calander = () => {
                     return date.getDate() === holidayDate.getDate() && date.getMonth() === holidayDate.getMonth() && date.getFullYear() === holidayDate.getFullYear();
                 });
                 if (isHoliday && isWeekend) {
-                    return <div key={index} className='holiday' onClick={showName}>{date.getDate()}</div>;
+                    return <div key={index} className='holiday' onClick={showName}>{date.getDate()}
+                    <span>H</span>
+                    </div>;
                 }
                 if (isHoliday && !isWeekend) {
-                    return <div key={index} className='holiday' onClick={showName}>{date.getDate()}</div>;
+                    return <div key={index} className='holiday' onClick={showName}>{date.getDate()}
+                    <span className='holidaytext'>Holiday</span>
+                    </div>;
                 }
                 // Highlight the selected date
                 const isSelected = selctedDate && date.getDate() === selctedDate.getDate() && date.getMonth() === selctedDate.getMonth() && date.getFullYear() === selctedDate.getFullYear();
