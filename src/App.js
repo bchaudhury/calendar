@@ -4,8 +4,8 @@ import Calander from './components/Calander'
 
 
 const App = () => {
-  return (
-    <div>
+  return ( 
+    <div className='app'>
       <Calander/>
     </div>
   )

@@ -39,7 +39,7 @@ const Calander = () => {
 
     const showName = (event) => {
         const date = event.target.innerText;
-        const month = currentDate.getMonth() + 1;
+        const month = currentDate.getMonth() + 1; // Months are zero-based in JavaScript
         const year = currentDate.getFullYear();
         const holiday = Holidays.find(holiday => {
             const holidayDate = new Date(holiday.date);
