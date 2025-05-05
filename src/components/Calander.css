@@ -189,18 +189,19 @@
 }
 
 .holidaytext{
-    color: #fff;
     font-size: 12px;
-    font-weight: small;
+    font-weight: smaller;
     text-align: center;
-    color: black;
+    color: rgb(59, 1, 1);
+    border: 2px solid #856565;
+    background-color: #f8c2c2;
 }
-/* 
-.calander__current__month:hover {
-    background: #a16f01;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    cursor: pointer;
-} */
+
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    font-size: 16px;
+  }

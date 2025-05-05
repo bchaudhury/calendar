@@ -37,17 +37,24 @@ const Calander = () => {
     setCurrentDate(nextDate);
   }
 
-    const showName = (event) => {
+    // This function will show the name of the festival when clicked on the date
+  const showName = (event) => {
         const date = event.target.innerText;
         const month = currentDate.getMonth() + 1; // Months are zero-based in JavaScript
         const year = currentDate.getFullYear();
         const holiday = Holidays.find(holiday => {
+            // Check if the date matches the holiday date
             const holidayDate = new Date(holiday.date);
+            // Compare the date, month, and year
             return holidayDate.getDate() === parseInt(date) && holidayDate.getMonth() + 1 === month && holidayDate.getFullYear() === year;
         });
+        // If a holiday is found, show its name in a particular div
         if (holiday) {
-            alert(`Festival: ${holiday.name}`);
+            const holidayName = holiday.name;
+            alert(`Festival: ${holidayName}`); // You can replace this with your desired action
         }
+
+
 
   }
 
@@ -103,12 +110,7 @@ const Calander = () => {
                     const holidayDate = new Date(holiday.date);
                     return date.getDate() === holidayDate.getDate() && date.getMonth() === holidayDate.getMonth() && date.getFullYear() === holidayDate.getFullYear();
                 });
-                if (isHoliday && isWeekend) {
-                    return <div key={index} className='holiday' onClick={showName}>{date.getDate()}
-                    <span>H</span>
-                    </div>;
-                }
-                if (isHoliday && !isWeekend) {
+                if (isHoliday) {
                     return <div key={index} className='holiday' onClick={showName}>{date.getDate()}
                     <span className='holidaytext'>Holiday</span>
                     </div>;
