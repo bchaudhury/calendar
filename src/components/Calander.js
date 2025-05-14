@@ -115,6 +115,7 @@ const Calander = () => {
                     <span className='holidaytext'>Holiday</span>
                     </div>;
                 }
+
                 // Highlight the selected date
                 const isSelected = selctedDate && date.getDate() === selctedDate.getDate() && date.getMonth() === selctedDate.getMonth() && date.getFullYear() === selctedDate.getFullYear();
                 return (
