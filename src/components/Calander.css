@@ -123,7 +123,6 @@
     box-sizing: border-box;
     background-color: #f8c2c2;
     color: var(--holiday-color, #ff0000);
-    /* Default to red if --holiday-color is not set */
     background-color: #f8c2c2;
     border: 2px solid #f8f8f8;
     text-align: center;
@@ -155,8 +154,8 @@
     width: 14.28%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f89b6f;
-    color: #fff;
+    background-color: #ff7f7f;
+    color: black;
     border: 2px solid #f8f8f8;
     text-align: center;
     justify-content: center;
