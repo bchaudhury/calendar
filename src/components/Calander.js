@@ -51,11 +51,33 @@ const Calander = () => {
         // If a holiday is found, show its name in a particular div
         if (holiday) {
             const holidayName = holiday.name;
-            alert(`Festival: ${holidayName}`); // You can replace this with your desired action
+            const holidayText = document.querySelector('.holidaytext');
+            holidayText.textContent = holidayName;
+            // Set the text content to the holiday name
+            holidayText.innerText = holidayName;
+            // Set the holiday name to the text content
+
+
+
+            holidayText.style.backgroundColor = 'black'; // Set background color to red
+            holidayText.style.fontSize = '14px'; // Set font size
+            holidayText.style.fontWeight = 'bold'; // Set font weight to bold
+            holidayText.style.textAlign = 'center'; // Center the text
+            holidayText.style.opacity = '0.8'; // Set opacity to 0.8
+            holidayText.style.color = 'white'; // Set text color to white
+            holidayText.style.padding = '5px'; // Add some padding
+            holidayText.style.borderRadius = '5px'; // Add border radius
+            holidayText.style.position = 'absolute'; // Set position to absolute
+            holidayText.style.left = event.target.getBoundingClientRect().left + 'px'; // Position it above the clicked date
+            // Set left position to the clicked date
+            holidayText.style.display = 'block'; // Show the holiday name
+    
+            holidayText.style.zIndex = '5'; // Set z-index to 1
+            holidayText.style.top = event.target.getBoundingClientRect().top + 'px'; // Position it above the clicked date
+            setTimeout(() => {
+                holidayText.style.display = 'none'; // Hide the holiday name after 2 seconds
+            }, 2000);
         }
-
-
-
   }
 
   return (
@@ -111,8 +133,20 @@ const Calander = () => {
                     return date.getDate() === holidayDate.getDate() && date.getMonth() === holidayDate.getMonth() && date.getFullYear() === holidayDate.getFullYear();
                 });
                 if (isHoliday) {
-                    return <div key={index} className='holiday' onClick={showName}>{date.getDate()}
-                    <span className='holidaytext'>Holiday</span>
+                    return <div key={index} className='holiday'>
+                        <div className='holidaytext'>
+                            {/* This will show the name of the festival when clicked on the date */}
+                            <div className='holiday__name'>
+                                {date.getDate()}
+                                <div className='holiday__name__text' onClick={showName}>
+                                    {Holidays.find(holiday => {
+                                        const holidayDate = new Date(holiday.date);
+                                        return date.getDate() === holidayDate.getDate() && date.getMonth() === holidayDate.getMonth() && date.getFullYear() === holidayDate.getFullYear();
+                                    })?.name}
+                                </div>
+                            </div>
+                        </div>            
+                    
                     </div>;
                 }
 
