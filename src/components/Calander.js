@@ -37,6 +37,12 @@ const Calander = () => {
     setCurrentDate(nextDate);
   }
 
+  const showtoday =() => {
+    const today = new Date();
+    setCurrentDate(today);
+    setSelectedDate(today);
+    console.log("Today is: " + today.toDateString());
+  }
     // This function will show the name of the festival when clicked on the date
   const showName = (event) => {
         const date = event.target.innerText;
@@ -56,9 +62,6 @@ const Calander = () => {
             // Set the text content to the holiday name
             holidayText.innerText = holidayName;
             // Set the holiday name to the text content
-
-
-
             holidayText.style.backgroundColor = 'black'; // Set background color to red
             holidayText.style.fontSize = '14px'; // Set font size
             holidayText.style.fontWeight = 'bold'; // Set font weight to bold
@@ -74,6 +77,7 @@ const Calander = () => {
     
             holidayText.style.zIndex = '5'; // Set z-index to 1
             holidayText.style.top = event.target.getBoundingClientRect().top + 'px'; // Position it above the clicked date
+            console.log(holidayName);
             setTimeout(() => {
                 holidayText.style.display = 'none'; // Hide the holiday name after 2 seconds
             }, 2000);
@@ -120,7 +124,7 @@ const Calander = () => {
                 // Highlight the current date
                 const isToday = date.getDate() === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear();
                 if (isToday) {
-                    return <div key={index} className='today'>{date.getDate()}</div>;
+                    return <div key={index} className='today' onClick={showtoday}>{date.getDate()}</div>;
                 }
                 // Mark Satuday and Sunday with red colors
                 const isWeekend = date.getDay() === 0 || date.getDay() === 6; // Sunday or Saturday

@@ -78,7 +78,7 @@
 
 .calander__dates, .calander__empty__date {
     width: 100%;
-    color: white;
+    color: rgb(220, 241, 142);
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -99,7 +99,7 @@
 
 .calander__date {
     width: 14.28%;
-    padding: 20px;
+    padding: auto;
     box-sizing: border-box;
     background-color: #eef8c2;
     color:black;
@@ -118,7 +118,7 @@
 
 .weekend, .holiday { 
     width: 14.28%;
-    padding: 20px;
+    padding: auto;
     box-sizing: border-box;
     background-color: #f8c2c2;
     color: var(--holiday-color, #ff0000);
@@ -136,36 +136,29 @@
     place-content: center;
 }
 
-/* .holiday {
-    cursor: pointer;
-}
-
-.holiday:hover {
-    background: #963b3b;
-    color: #fff;
-    display: grid;
-    justify-content: center;
+.today { 
     width: 14.28%;
-    cursor: pointer;
-} */
-
-.today {
-    width: 14.28%;
-    padding: 20px;
+    padding: auto;
     box-sizing: border-box;
-    background-color: #8d3b3b;
-    color: rgb(250, 244, 244);
-    border: 2px solid #f8f8f8;
+    font-weight: 600px;
+    font-size: 16px;
+    color: var(--today-color, #ffffff);
+    border: 2px solid #b8f893;
+    background-color: #7c8a02;
+    border-radius: 15%;
     text-align: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 16px;
-    opacity: 0.8;
-    border-radius: 5px;
     display: grid;
     flex-direction: column;
     overflow-wrap: normal;
     place-content: center;
+}
+
+.holiday__name:hover, .holiday__name__text:hover, .holiday:hover  { 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size:small;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .calander__icon {
@@ -188,14 +181,7 @@
     border-radius: 10%;
 }
 
-/* .holidaytext{
-    font-size: 12px;
-    font-weight: smaller;
-    text-align: center;
-    color: rgb(59, 1, 1);
-} */
-
-  .holiday__name {
+.holiday__name {
     font-size: 16px;
     font-weight: smaller;
     text-align: center;
