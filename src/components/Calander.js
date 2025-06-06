@@ -41,47 +41,6 @@ const Calander = () => {
     const today = new Date();
     setCurrentDate(today);
     setSelectedDate(today);
-    console.log("Today is: " + today.toDateString());
-  }
-    // This function will show the name of the festival when clicked on the date
-  const showName = (event) => {
-        const date = event.target.innerText;
-        const month = currentDate.getMonth() + 1; // Months are zero-based in JavaScript
-        const year = currentDate.getFullYear();
-        const holiday = Holidays.find(holiday => {
-            // Check if the date matches the holiday date
-            const holidayDate = new Date(holiday.date);
-            // Compare the date, month, and year
-            return holidayDate.getDate() === parseInt(date) && holidayDate.getMonth() + 1 === month && holidayDate.getFullYear() === year;
-        });
-        // If a holiday is found, show its name in a particular div
-        if (holiday) {
-            const holidayName = holiday.name;
-            const holidayText = document.querySelector('.holidaytext');
-            holidayText.textContent = holidayName;
-            // Set the text content to the holiday name
-            holidayText.innerText = holidayName;
-            // Set the holiday name to the text content
-            holidayText.style.backgroundColor = 'black'; // Set background color to red
-            holidayText.style.fontSize = '14px'; // Set font size
-            holidayText.style.fontWeight = 'bold'; // Set font weight to bold
-            holidayText.style.textAlign = 'center'; // Center the text
-            holidayText.style.opacity = '0.8'; // Set opacity to 0.8
-            holidayText.style.color = 'white'; // Set text color to white
-            holidayText.style.padding = '5px'; // Add some padding
-            holidayText.style.borderRadius = '5px'; // Add border radius
-            holidayText.style.position = 'absolute'; // Set position to absolute
-            holidayText.style.left = event.target.getBoundingClientRect().left + 'px'; // Position it above the clicked date
-            // Set left position to the clicked date
-            holidayText.style.display = 'block'; // Show the holiday name
-    
-            holidayText.style.zIndex = '5'; // Set z-index to 1
-            holidayText.style.top = event.target.getBoundingClientRect().top + 'px'; // Position it above the clicked date
-            console.log(holidayName);
-            setTimeout(() => {
-                holidayText.style.display = 'none'; // Hide the holiday name after 2 seconds
-            }, 2000);
-        }
   }
 
   return (
@@ -138,19 +97,17 @@ const Calander = () => {
                 });
                 if (isHoliday) {
                     return <div key={index} className='holiday'>
-                        <div className='holidaytext'>
-                            {/* This will show the name of the festival when clicked on the date */}
+                        <div>
                             <div className='holiday__name'>
                                 {date.getDate()}
-                                <div className='holiday__name__text' onClick={showName}>
+                                <div className='holiday__name__text'>
                                     {Holidays.find(holiday => {
                                         const holidayDate = new Date(holiday.date);
                                         return date.getDate() === holidayDate.getDate() && date.getMonth() === holidayDate.getMonth() && date.getFullYear() === holidayDate.getFullYear();
                                     })?.name}
                                 </div>
                             </div>
-                        </div>            
-                    
+                        </div>                
                     </div>;
                 }
 
@@ -164,6 +121,20 @@ const Calander = () => {
             })}
 
         </div>
+        {/* Display holiday name if current date is holiday */}
+        {selctedDate && Holidays.some(holiday => {
+            const holidayDate = new Date(holiday.date);
+            return selctedDate.getDate() === holidayDate.getDate() && selctedDate.getMonth() === holidayDate.getMonth() && selctedDate.getFullYear() === holidayDate.getFullYear();
+        }) && (
+            <div className='holiday__message'>
+                {Holidays.find(holiday => {
+                    const holidayDate = new Date(holiday.date);
+                    return selctedDate.getDate() === holidayDate.getDate() && selctedDate.getMonth() === holidayDate.getMonth() && selctedDate.getFullYear() === holidayDate.getFullYear();
+                })?.name}
+            </div>
+        )}
+
+
     </div>
   )
 }

@@ -97,13 +97,13 @@
     border-radius: 5px;
 }
 
-.calander__date {
+.calander__date, .today {
     width: 14.28%;
-    padding: auto;
+    padding: 5px;
     box-sizing: border-box;
     background-color: #eef8c2;
     color:black;
-    border: 2px solid #f8f8f8;
+    border: 2px solid #f5f3f3;
     text-align: center;
     justify-content: center;
     font-weight: bold;
@@ -118,7 +118,7 @@
 
 .weekend, .holiday { 
     width: 14.28%;
-    padding: auto;
+    padding: 5px;
     box-sizing: border-box;
     background-color: #f8c2c2;
     color: var(--holiday-color, #ff0000);
@@ -134,31 +134,6 @@
     flex-direction: column;
     overflow-wrap: normal;
     place-content: center;
-}
-
-.today { 
-    width: 14.28%;
-    padding: auto;
-    box-sizing: border-box;
-    font-weight: 600px;
-    font-size: 16px;
-    color: var(--today-color, #ffffff);
-    border: 2px solid #b8f893;
-    background-color: #7c8a02;
-    border-radius: 15%;
-    text-align: center;
-    justify-content: center;
-    display: grid;
-    flex-direction: column;
-    overflow-wrap: normal;
-    place-content: center;
-}
-
-.holiday__name:hover, .holiday__name__text:hover, .holiday:hover  { 
-    transition: background-color 0.3s ease, color 0.3s ease;
-    font-size:small;
-    font-weight: bold;
-    cursor: pointer;
 }
 
 .calander__icon {
@@ -181,16 +156,41 @@
     border-radius: 10%;
 }
 
-.holiday__name {
+.holiday__name, .today  {
     font-size: 16px;
     font-weight: smaller;
     text-align: center;
-    color: #ff3300;;
+    color: #ff3300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
 
   .holiday__name__text {
-    color: #ff3300;;
+    color: #ff3300;
     font-size: 8px;
     font-weight: small;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+.today {
+    border: 2px solid #085302;
+}
+
+.holiday__message {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #ff3300;
+    background-color: #f8c2c2;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
