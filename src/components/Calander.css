@@ -97,7 +97,7 @@
     border-radius: 5px;
 }
 
-.calander__date, .today {
+.calander__date {
     width: 14.28%;
     padding: 5px;
     box-sizing: border-box;
@@ -156,7 +156,7 @@
     border-radius: 10%;
 }
 
-.holiday__name, .today  {
+.holiday__name  {
     font-size: 16px;
     font-weight: smaller;
     text-align: center;
@@ -180,7 +180,21 @@
   }
 
 .today {
-    border: 2px solid #085302;
+    width: 14.28%;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: #2c3502;
+    border: 3px solid #356b02;
+    text-align: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0.8;
+    border-radius: 5px;
+    display: grid;
+    flex-direction: column;
+    overflow-wrap: normal;
+    place-content: center;
 }
 
 .holiday__message {
