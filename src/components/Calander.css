@@ -165,7 +165,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
   }
 
   .holiday__name__text {
@@ -207,4 +206,5 @@
     border-radius: 5px;
     margin-top: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
