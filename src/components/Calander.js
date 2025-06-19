@@ -48,11 +48,12 @@ const Calander = () => {
 
         {/* Header with logo and month-year navigation buttons*/}
         <div className='calander__header'>
-            
-                <img src={Logo} className='calander__icon' alt=''/>
+                <div>
+                    <img src={Logo} className='calander__icon' alt=''/>
+                </div>
                 <button  onClick = {prevMonth} className='calander__previous__button'>&lt;</button>
                 <span className='calander__current__month'>{currentDate.toLocaleString('default', { month: 'long' })} {currentDate.getFullYear()}</span>
-                <button onClick = {nextMonth} className='calander__next__button'>&gt;</button>
+                <button onClick = {nextMonth} className='calander__next__button'>&gt;</button>                
             
         </div>
 
