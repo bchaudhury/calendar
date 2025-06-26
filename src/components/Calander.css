@@ -65,8 +65,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background: #f0f0f0;
-    padding: 2px 0;
+    background: whitesmoke;
+    padding: 3px 0;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
@@ -76,32 +76,32 @@
 
 .calander__day {
     width: 14.28%;
-    padding: 5px;
-    border: 1px solid #8b7e62;
+    padding: 6px;
+    border: 1px solid whitesmoke;
     color: black;
     box-sizing: border-box;
     text-align: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     opacity: 0.8;
     border-radius: 2px;
-    background-color: #e3f3bf;
+    background-color: #bebc96;
 }
 
 .sunday, .saturday{
-    color: #ff3300;
+    color: red;
     width: 14.28%;
-    padding: 5px;
-    border: 1px solid #8b7e62;
+    padding: 6px;
+    border: 1px solid whitesmoke;
     box-sizing: border-box;
     text-align: center;
     justify-content: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
     opacity: 0.8;
     border-radius: 2px;
-    background-color: #e3f3bf;
+    background-color: #bebc96;
     cursor: pointer;
 }
 
