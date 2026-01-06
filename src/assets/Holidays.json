@@ -169,5 +169,80 @@
         "name": "Shri Ram Navami",
         "date": "03-26-2026",
         "country": "India"
+    },
+    {
+        "name": "Mahavir Jayanti",
+        "date": "03-31-2026",
+        "country": "India"
+    },
+    {
+        "name": "Good Friday",
+        "date": "04-03-2026",
+        "country": "India"
+    },
+    {
+        "name": "Dr. Babasaheb Ambedkar Jayanti",
+        "date": "04-14-2026",
+        "country": "India"
+    },
+    {
+        "name": "Workers' Day | Buddha Purnima",
+        "date": "05-01-2026",
+        "country": "India"
+    },
+    {
+        "name": "Rabindranath Tagore Jayanti",
+        "date": "05-09-2026",
+        "country": "India"
+    },
+    {
+        "name": "Id-Ud-Zoha (Bakrid)",
+        "date": "05-26-2026",
+        "country": "India"
+    },
+    {
+        "name": "Muharram",
+        "date": "06-26-2026",
+        "country": "India"
+    },
+    {
+        "name": "Independence Day",
+        "date": "08-15-2026",
+        "country": "India"
+    },
+    {
+        "name": "Janmashtami",
+        "date": "09-04-2026",
+        "country": "India"
+    },
+    {
+        "name": "Ganesh Chaturthi",
+        "date": "09-07-2026",
+        "country": "India"
+    },
+    {
+        "name": "Mahatma Gandhi Jayanti",
+        "date": "10-02-2026",
+        "country": "India"
+    },
+    {
+        "name": "Dussehra",
+        "date": "10-20-2026",
+        "country": "India"
+    },
+    {
+        "name": "Balipratipada",
+        "date": "11-11-2026",
+        "country": "India"
+    },
+    {
+        "name": "Guru Nanak Jayanti",
+        "date": "11-24-2026",
+        "country": "India"
+    },
+    {
+        "name": "Christmas Day",
+        "date": "12-25-2026",
+        "country": "India"
     }
 ]
