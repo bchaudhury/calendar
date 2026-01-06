@@ -124,6 +124,50 @@
         "name": "Christmas Day",
         "date": "12-25-2025",
         "country": "India"
+    },
+    {
+        "name": "New Year's Day",
+        "date": "01-01-2026",
+        "country": "India"
+    },
+    {
+        "name": "Swami Vivekananda Jayanti",
+        "date": "01-12-2026",
+        "country": "India"
+    },
+    {
+        "name": "Republic Day",
+        "date": "01-26-2026",
+        "country": "India"
+    },
+    {
+        "name": "Netaji's Birthday | Saraswati Puja",
+        "date": "01-23-2026",
+        "country": "India"
+    },
+    {
+        "name": "Sabe-barat",
+        "date": "02-04-2026",
+        "country": "India"
+    },
+    {
+        "name": "Maha Shivaratri",
+        "date": "02-15-2026",
+        "country": "India"
+    },
+    {
+        "name": "Holi",
+        "date": "03-03-2026",
+        "country": "India"
+    },
+    {
+        "name": "Eid-Ul-Fitr (Ramzan Eid)",
+        "date": "03-20-2026",
+        "country": "India"
+    },
+    {
+        "name": "Shri Ram Navami",
+        "date": "03-26-2026",
+        "country": "India"
     }
-
 ]

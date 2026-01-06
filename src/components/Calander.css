@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 320px;
     border: 2px solid rgb(220, 235, 187);
     background: whitesmoke;
     border-radius: 10px;
@@ -39,6 +39,7 @@
     font-size: 16px;
     cursor: pointer;
     opacity: 0.8;
+    font-weight: bold;
 }
 
 .calander__current__month{
@@ -47,7 +48,7 @@
     align-items: center;
     border: 1.2px solid #edf1f0;
     width: 50%;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
     font-weight: 500;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -194,8 +195,8 @@
 }
 
 .calander__icon {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-left: 5px;
     border-radius: 50%;
 }
@@ -213,8 +214,9 @@
 
   .holiday__name__text {
     color: #ff3300;
-    font-size: 6px;
+    font-size: 6.5px;
     font-weight: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     display: flex;
     flex-direction: column;
